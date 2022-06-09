@@ -4,7 +4,10 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
 @Component({
   selector: 'app-warn',
   templateUrl: './warn.component.html',
-  styleUrls: ['./warn.component.scss']
+  styleUrls: [
+    '../../styles.scss',
+    './warn.component.scss'
+  ]
 })
 export class WarnComponent implements OnInit {
 

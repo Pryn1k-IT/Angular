@@ -1,0 +1,168 @@
+//================================================
+//=============== HEADER STYLE ================ >>
+//================================================
+@mixin xs {
+    @media (max-width: 0px) {
+        @content;
+    }
+}
+@mixin sm {
+    @media only screen and (min-width: 576px) {
+        @content;
+    }
+}
+@mixin md {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+@mixin xl {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+.svg-arrow {
+    width: 10px;
+    height: 5px;
+    margin-left: 8px;
+    fill: #000;
+}
+.btn {
+    display: flex;
+    padding: 0 22px;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: 1px solid green;
+    height: 40px;
+    color: green;
+    cursor: pointer;
+    text-transform: uppercase;
+    align-items: center;
+    transition: 0.4s ease;
+    box-sizing: border-box;
+    &:hover {
+        outline: none;
+        text-decoration: none;
+        background: linear-gradient(0deg, #4cb649 0%, #5ddf5a 100%);
+        color: #fff;
+        border: 1px solid #fff;
+    }
+}
+
+.btn-bgreen {
+    display: block;
+    background: linear-gradient(0deg, #4cb649 0%, #5ddf5a 100%);
+    border-radius: 30px;
+    padding: 0 36px;
+    font-size: 1rem;
+    color: #fff;
+    height: 40px;
+    transition: 0.4s ease;
+    box-sizing: border-box;
+    border: unset;
+    &:hover {
+        outline: none;
+        text-decoration: none;
+        background: linear-gradient(0deg, #ff8d00 3.81%, #ffa400 97.78%);
+    }
+}
+a {
+    text-decoration: unset;
+    color: #000;
+}
+.svg-menu {
+    width: 23px;
+    height: 22px;
+}
+.menu__nav-btn {
+    border: none;
+    background-color: unset;
+}
+.menu-wrp {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.menu {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex: 1 0 auto;
+    @include lg {
+        margin-top: 40px;
+        display: flex;
+    }
+    &__logo {
+        font-size: 18px;
+        color: #000;
+        flex: 1 0 20%;
+        padding-left: 24px;
+        @include lg {
+            padding-left: 0;
+            flex: unset;
+            display: block;
+        }
+    }
+    &__nav {
+        display: none;
+        text-transform: uppercase;
+        @include lg {
+            display: block;
+        }
+        ul {
+            display: flex;
+            margin: 0;
+            li {
+                display: inline-flex;
+                align-items: center;
+                margin-right: 30px;
+                box-sizing: border-box;
+                font-weight: 500;
+                &:hover {
+                    border-bottom: 3px solid green;
+                    margin-bottom: -3px;
+                }
+                &.-active {
+                    border-bottom: 3px solid green;
+                    margin-bottom: -3px;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                    &:hover {
+                        text-decoration: unset;
+                        color: green;
+                        svg > path {
+                            fill: green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .controls {
+        display: flex;
+        &__login {
+            display: none;
+            margin-right: 10px;
+            @include md {
+                display: block;
+            }
+        }
+        &__reg {
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+    }
+}
+//================================================
+//>> ============ HEADER STYLE ===================
+//================================================

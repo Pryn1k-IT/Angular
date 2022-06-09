@@ -49,14 +49,14 @@
         justify-content: space-between;
         flex-wrap: wrap;
         text-align: center;
-        @include lg {
-            height: 40px;
-            justify-content: center;
-            text-align: right;
-            padding: 0;
-        }
         @include md {
             align-items: center;
+        }
+        @include lg {
+            height: 40px;
+            justify-content: space-around;
+            text-align: right;
+            padding: 0;
         }
     }
     &__close {

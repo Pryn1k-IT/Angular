@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { WarnComponent } from './warn/warn.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WarnComponent
+    WarnComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule
