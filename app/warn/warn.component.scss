@@ -1,0 +1,110 @@
+//================================================
+//=============== WARNING STYLE ================ >>
+//================================================
+@mixin xs {
+    @media (max-width: 0px) {
+        @content;
+    }
+}
+@mixin sm {
+    @media only screen and (min-width: 576px) {
+        @content;
+    }
+}
+@mixin md {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+@mixin xl {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+.svg-warn {
+    width: 25px;
+    height: 21px;
+    fill: rgb(255, 123, 0);
+}
+
+.svg-close {
+    fill: gray;
+    width: 14px;
+}
+
+.warning {
+    background: #22252e;
+    font-size: 12px;
+    position: relative;
+    &__block {
+        height: 68px;
+        display: flex;
+        padding: 3px 25px 0 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+        @include lg {
+            height: 40px;
+            justify-content: center;
+            text-align: right;
+            padding: 0;
+        }
+        @include md {
+            align-items: center;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 50%;
+        right: 13px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        padding: 5px 10px;
+        background-color: unset;
+        border: unset;
+    }
+    &__message {
+        padding: 0 16px 0 0;
+        align-items: center;
+        display: inline-flex;
+        font-weight: 700;
+        color: rgb(255, 123, 0);
+        order: -1;
+        flex: 0 0 50%;
+        @include md {
+            order: unset;
+            flex: unset;
+            justify-content: center;
+        }
+    }
+    &__user-info {
+        padding: 0 16px;
+        color: gray;
+    }
+    &__more {
+        padding: 0 20px 0 0;
+        color: red;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        order: -1;
+        flex: 0 0 50%;
+        &:hover {
+            color: #fff;
+        }
+        @include md {
+            padding: 0 0 0 16px;
+            order: unset;
+            flex: unset;
+        }
+    }
+}
+//================================================
+//>> ============ WARNING STYLE ===================
+//================================================

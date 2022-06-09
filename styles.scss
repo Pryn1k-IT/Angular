@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@mixin xs {
+    @media (max-width: 0px) {
+        @content;
+    }
+}
+@mixin sm {
+    @media only screen and (min-width: 576px) {
+        @content;
+    }
+}
+@mixin md {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+@mixin xl {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+.body {
+    min-width: 320px;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    @include sm {
+        width: 576px;
+    }
+    @include md {
+        width: 768px;
+    }
+    @include lg {
+        width: 992px;
+    }
+    @include xl {
+        width: 1200px;
+    }
+}
